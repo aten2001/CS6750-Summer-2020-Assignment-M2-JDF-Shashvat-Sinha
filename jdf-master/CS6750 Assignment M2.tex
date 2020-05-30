@@ -1,0 +1,133 @@
+\documentclass[
+	%a4paper, % Use A4 paper size
+	letterpaper, % Use US letter paper size
+]{jdf}
+
+\addbibresource{references.bib}
+
+\author{Shashvat Sinha}
+\email{shashvat.sinha@gatech.edu}
+\title{Assignment M2 (Summer 2020)\\CS6750}
+
+\begin{document}
+%\lsstyle
+
+\maketitle
+
+\begin{abstract}
+    For my \textbf{M*} assignments in CS6750 (Summer 2020), I have chosen to redesign the interface that \textbf{LinkedIn} uses for its messaging. There are several aspects of the messaging interface that, in my opinion, could be improved - there is limited support for threading, messages do not support rich text, and the editor is geared towards short texts rather than a proper messaging platform. 
+    
+    As a networking tool LinkedIn would benefit from improved communication between its users, as it would improve the value proposition its users see. By the end of the M* assignments, I plan to focus on the task of communicating using LinkedIn messaging, taking it  through a complete design lifecycle. 
+\end{abstract}
+
+\section{Needfinding Execution}
+We will perform the following NeedFinding executions:
+
+\begin{itemize}
+    \item Analysis of product reviews
+    \item Participant observation
+    \item Evaluation of existing user interfaces
+\end{itemize}
+
+Based on what we learnt in the needfinding via product reviews and participant observation,  exercised the alternative option described in \textbf{\emph{M1}}, the evaluation of existing user interfaces.
+
+
+\subsection{Execution A: Analysis of Product Reviews}
+As a market leader in its category, LinkedIn is the subject of  the proverbial opinion - everyone has one. A \href{https://lmgtfy.com/?q=linkedin+sucks}{creative search query} returns sufficient data to review for this option. Further data can be pulled from a \href{https://twitter.com/search?q=linkedinsucks&src=typed_query}{hashtag search on Twitter}.
+
+These reviews will then be distilled, to obtain the following types of data:
+\begin{enumerate}
+    \item What kind of user has written the opinion or review.
+    Does the writer consider themselves a power user, a casual user or something else?
+    \item From what lens does the writer view LinkedIn - do they consider it a networking tool, a recruitment tool, or something else? Our objective is to categorize where the opinions are coming from.
+    \item What is the writer attempting to do with LinkedIn? Is it related to the messaging capability?
+    \item What is the writer failing to do? Is there a Gulf of Execution and Gulf of Evaluation we can identify?
+    \item What, if any, suggestions does the writer make as a means to make them whole again?
+\end{enumerate}
+
+\begin{table}[h] % [h] forces the table to be output where it is defined in the code (it suppresses floating)
+	\caption{Proposed Analysis of Product Reviews}
+	\small % Reduce font size
+	\centering % Centre the table
+	\begin{tabular}{L{0.2\linewidth} C{0.05\linewidth} L{0.15\linewidth} L{0.2\linewidth}  L{0.4\linewidth}}
+		\textbf{Theme} & \textbf{Score} & \textbf{Citation} & \textbf{Review Date} & \textbf{Remarks}\\
+		\toprule[0.5pt]
+		Lack of rich text & 1 & Review URL & YYYY/MM/DD & Reviewer thinks that messaging should have rich text capability\\
+		\midrule
+		Can't forward messages & 3 & Review URL & YYYY/MM/DD & Reviewer thinks messages should be forwardable\\
+		\midrule
+		... & ... & ... & ... & ...\\
+		\midrule
+	\end{tabular}
+\end{table}
+
+Here, the score would be on a scale of 1-5
+\begin{enumerate}
+    \item Highly dissatisfied
+    \item Dissatisfied
+    \item Neutral
+    \item Satisfied
+    \item Highly satisfied
+\end{enumerate}
+
+One should be able to read through these and determine what are the major themes or threads seen in each of them. Techniques such as wordclouds could be employed. A simple analysis of summing up the scores grouped by themes will tell us which area causes the greatest pain (lowest scores indicate dissatisfaction)
+
+These scores would form part of an input into the second approach, below.
+
+The themes themselves would be used to build the questionnaire in the third approach, i.e. the survey.
+
+\subsection{Execution B: Participant Observation}
+I am a user of LinkedIn. Over the years, I have made several observations about LinkedIn's messaging system as I tried to use it for tasks related to networking and communication.
+
+As a first step, I will collate the thoughts I have had over the years.
+
+I will then take the outputs of the previous step - the Analysis of Product Reviews - and try to visit those experiences on myself. To do this, I will attempt to recreate the steps followed by the reviewers, or attempt to achieve the same end goal as them, and determine the areas that caused friction. This should give me a better understanding of the issues raised in those reviews.
+
+I will then try to identify how my observations line up with the observations made by the other reviewers - and vice versa.
+
+Here, special care must be taken to address confirmation bias - I already have a view on LinkedIn messaging (after all, I chose this topic for a reason). Therefore I must keep my eyes and mind open to possibilities that LinkedIn Messaging does meet my needs.
+
+There is a second bias that I could be susceptible to - observer bias - but with a twist. Here, I would not be biasing users, or reviewers. After all, those reviews were written before this assignment was started and I had no interaction with the reviewers. Instead, it would be the reviewers biasing me, wherein having read those reviews, I would be predisposed to find the same faults they found.
+
+My approach to mitigate the effects of this bias would be to split my Participant Observation exercise into two parts. The first part, where I put down my observations would be done \textit{before} the analysis of product reviews, so as not to bias myself.
+
+The second part, where I try to visit the experiences of reviewers, and try them out myself would be done \textit{after} I have completed the analysis of product reviews.
+
+
+
+\subsection{Execution C: Evaluation of Existing User Interfaces}
+I'm not entirely sure of the efficacy of customer surveys for the objective of improving LinkedIn. 
+
+Therefore as an alternative to user surveys, I would like to take propose a different needfinding exercise, that of evaluating other user interfaces.
+
+There are several Personal Relationship Management (PRM) alternatives to LinkedIn, as well as examples from the CRM world. One could take a look at them to form a considered opinion.
+
+To do this I would take the following steps:
+\begin{enumerate}
+    \item Perform a search for products that are trying to fill the gap in LinkedIn (my first exercise might give me starting points for the search).
+    \item Gain access to these products (e.g. if they have free tiers or evaluation signups).
+    \item Attempt to use these products in ways similar to how my survey participants have indicated a preference for, and also to address the findings of the Participant Observation and Product Reviews
+    \item Note the Gulfs of Execution and Evaluation for these products.
+\end{enumerate}
+
+The reason this step can be important is because competing products are cases where someone felt strongly enough about LinkedIn's shortcomings that they put in the effort to build a better solution. This would be a stronger vote for a particular feature than merely an answer to a survey question or a review in a blog post. 
+
+One can also assume that the building of a competing product to LinkedIn might have started with an exercise such as this one, and the end result that we see from the competitor is simply the distillation of that exercise into something actionable - which is what we are looking for in our own exercise.
+
+If we are trying to improve our mousetrap, it may help to see how others are attempting to make a better mousetrap.
+
+
+
+
+\section{Data Inventory}
+
+\section{Defining Requirements}
+
+\section{Continued Needfinding}
+
+\section{References}
+
+\printbibliography[heading=none]
+
+
+\end{document}
