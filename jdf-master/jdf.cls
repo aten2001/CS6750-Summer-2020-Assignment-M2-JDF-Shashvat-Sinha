@@ -237,8 +237,8 @@
 
 %%
 % References
+
 \RequirePackage[
-    backend=biber,
 	bibstyle=authoryear,
 	dashed=false,
 	sorting=nyt,
@@ -247,6 +247,10 @@
 ]{biblatex}
 
 
+\usepackage{biblatex}
+
+\addbibresource{references.bib}
+\nocite{*}
 
 \DeclareFieldFormat{bibentrysetcount}{\mkbibparens{\mknumalph{#1}}}
 \DeclareFieldFormat{labelnumberwidth}{\mkbibbrackets{#1}}

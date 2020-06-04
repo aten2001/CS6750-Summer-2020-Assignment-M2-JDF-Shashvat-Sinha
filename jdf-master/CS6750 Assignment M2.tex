@@ -3,7 +3,6 @@
 	letterpaper, % Use US letter paper size
 ]{jdf}
 
-\addbibresource{references.bib}
 
 \author{Shashvat Sinha}
 \email{shashvat.sinha@gatech.edu}
@@ -33,48 +32,68 @@ Based on what we learnt in the needfinding via product reviews and participant o
 
 
 \subsection{Execution A: Analysis of Product Reviews}
-As a market leader in its category, LinkedIn is the subject of  the proverbial opinion - everyone has one. A \href{https://lmgtfy.com/?q=linkedin+sucks}{creative search query} returns sufficient data to review for this option. Further data can be pulled from a \href{https://twitter.com/search?q=linkedinsucks&src=typed_query}{hashtag search on Twitter}.
+\subsubsection{Overview}
+A generic search on LinkedIn and LinkedIn messaging returned results of articles which were predominantly geared to how people were using LinkedIn, e.g. recruiters and marketers spamming users inboxes, rather than critiques of LinkedIn itself.
 
-These reviews will then be distilled, to obtain the following types of data:
-\begin{enumerate}
-    \item What kind of user has written the opinion or review.
-    Does the writer consider themselves a power user, a casual user or something else?
-    \item From what lens does the writer view LinkedIn - do they consider it a networking tool, a recruitment tool, or something else? Our objective is to categorize where the opinions are coming from.
-    \item What is the writer attempting to do with LinkedIn? Is it related to the messaging capability?
-    \item What is the writer failing to do? Is there a Gulf of Execution and Gulf of Evaluation we can identify?
-    \item What, if any, suggestions does the writer make as a means to make them whole again?
-\end{enumerate}
+Further analysis and curation yielded the following reporting and reviews of the LinkedIn messaging redesigns in 2015 and 2017 that moved from email style messaging towards shorter chat style messaging.
 
 \begin{table}[h] % [h] forces the table to be output where it is defined in the code (it suppresses floating)
-	\caption{Proposed Analysis of Product Reviews}
+	\caption{Analysis of Product Reviews}
 	\small % Reduce font size
 	\centering % Centre the table
-	\begin{tabular}{L{0.2\linewidth} C{0.05\linewidth} L{0.15\linewidth} L{0.2\linewidth}  L{0.4\linewidth}}
+	\begin{tabular}{L{0.25\linewidth} C{0.05\linewidth} L{0.15\linewidth} L{0.13\linewidth}  L{0.4\linewidth}}
 		\textbf{Theme} & \textbf{Score} & \textbf{Citation} & \textbf{Review Date} & \textbf{Remarks}\\
 		\toprule[0.5pt]
-		Lack of rich text & 1 & Review URL & YYYY/MM/DD & Reviewer thinks that messaging should have rich text capability\\
+		Messaging interface redesign to favor short messages & 2 & \cite{hull_2015} & Sep 2015 & Reviewer goes through LinkedIn's (then) new messaging interface and gives it poor marks for execution.\\
 		\midrule
-		Can't forward messages & 3 & Review URL & YYYY/MM/DD & Reviewer thinks messages should be forwardable\\
+		Walkthrough of LI's short messages & 4 & \cite{simos_2018} & Jul 2018 & Reviewer has positive view on LinkedIn short messaging\\
 		\midrule
-		... & ... & ... & ... & ...\\
+		Contact and messaging tags & 1 & \cite{driskell_2017} & Apr 2017 & User is unhappy with removal of message and contact tagging facility, describes how to leave LinkedIn\\
 		\midrule
+		LinkedIn's Facebook style messaging & 4 & \cite{gonzalez_2017} & Jun 2017 & Reviewer has positive view on LinkedIn short messaging, comparing it to Facebook's\\
+		\midrule
+		LinkedIn's messaging is now FB/Hangout style & 3 & \cite{ingraham_2020} & Feb 2020 & Reviewer describes how LinkedIn is now more like Facebook and Hangouts\\
+		\midrule
+		LinkedIn's messaging is now on the main page & 3 & \cite{lunden_2017} & Jan 2017 & Reviewer describes how chat is now on the main page to keep the user's attention on another feature, the news feed\\
+		\midrule
+		Walkthrough of LI's short messages & 4 & \cite{price_2017} & Apr 2017 & Messaging is designed to be everywhere on the LI interface instead of in its own tab\\
+		\midrule
+		Messaging on every page & 3 & \cite{warren_2017} & Jan 2017 & Messaging is on every page instead of on its own, similar to Facebook\\
+		\midrule
+		
 	\end{tabular}
 \end{table}
 
-Here, the score would be on a scale of 1-5
+\subsubsection{Analysis}
+
+The general themes are:
+\begin{itemize}
+    \item LinkedIn has moved from email style messaging to Facebook/Hangouts style short messages. 
+    \item This move brings LinkedIn in line with its social networking peers.
+    \item A second redesign also moves LinkedIn's messaging from its own page to all over the LinkedIn website, so that users can carry out their chat anywhere. This is a copy of Facebook's chat functionality.
+\end{itemize}
+
+
 \begin{enumerate}
-    \item Highly dissatisfied
-    \item Dissatisfied
-    \item Neutral
-    \item Satisfied
-    \item Highly satisfied
+    \item What kind of user has written the opinion or review.
+    All but three reviews seem are written by staff writers for major online publications. In two cases the writers wrote on LinkedIn's own blog website. One case was of a user who wrote on their own website - this user was the most dissatisfied with the redesign.
+    \item From what lens does the writer view LinkedIn - do they consider it a networking tool, a recruitment tool, or something else? 
+    The reviews are written from a point of view where LinkedIn is considered a social networking tool, where its peer is Facebook.
+    \item What is the writer attempting to do with LinkedIn? Is it related to the messaging capability?
+    As staff writers, the reviewers (except one) are merely reporting the release of new features, rather that actually try to use LinkedIn as a service. There was only one exception to this (\cite{driskell_2017}), who found the redesign so detrimental to his productivity, he described how to migrate away from LinkedIn.
+    
+    \item What is the writer failing to do? Is there a Gulf of Execution and Gulf of Evaluation we can identify?
+    The one writer who did have an open critique (\cite{driskell_2017}) had a clear Gulf of Execution, which could not be bridged after the redesign.
+    
+    \item What, if any, suggestions does the writer make as a means to make them whole again?
+    The only writer with a critique (\cite{driskell_2017}) would have wanted LinkedIn's messaging to regain its tagging feature.
 \end{enumerate}
 
-One should be able to read through these and determine what are the major themes or threads seen in each of them. Techniques such as wordclouds could be employed. A simple analysis of summing up the scores grouped by themes will tell us which area causes the greatest pain (lowest scores indicate dissatisfaction)
+\subsubsection{Conclusion}
+The needfinding approach of \textbf{analysis of product reviews} did not return useful data.
+There were very few actual product reviews that I was able to find of LinkedIn. The vast majority were critiques of LinkedIn's user culture and behavior, which does not help our exercise. The others were PR pieces written by staff writers who seemed to all say the same few things (e.g. comparisons with Facebook, the availability of messaging on all LinkedIn pages)
 
-These scores would form part of an input into the second approach, below.
-
-The themes themselves would be used to build the questionnaire in the third approach, i.e. the survey.
+I would consider this needfinding approach for this topic to be sub-optimal.
 
 \subsection{Execution B: Participant Observation}
 I am a user of LinkedIn. Over the years, I have made several observations about LinkedIn's messaging system as I tried to use it for tasks related to networking and communication.
